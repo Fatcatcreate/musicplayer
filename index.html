@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Player</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="player">
+    <h1>Upload and Play</h1>
+    <div id="inputs">
+    <label for="fileInput" class="custom-file-label">Choose a file</label>
+    <input type="file" id="fileInput" accept="audio/*" hidden>
+    <label hidden id="queueLabel" for="fileInput" class="customfile-label">Queue</label>
+    <input type="file" id="queueInput" accept="audio/*" hidden>
+    </div>
+    <p id="title"></p>
+    <div class="controls">
+      <button id="playPauseBtn">Play</button>
+      <input type="range" id="seekBar" value="0" min="0" max="100">
+      <div><span id="timeElapsed">0:00</span> / <span id="duration">0:00</span></div>
+    </div>
+  </div>
+
+  <audio id="audioPlayer" hidden></audio>
+  <script src="music.js"></script>
+</body>
+</html>
